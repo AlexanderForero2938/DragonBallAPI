@@ -1,23 +1,61 @@
 #tarjeta {
-    background-color: #1e1e1e;
-    color: white;
+    width: 300px;
+    height: 630px;
+    position: relative;
+    overflow: visible
+}
+
+#imagen-fondo {
+    background-image: url('https://u7.uidownload.com/vector/679/759/vector-lowpoly-grey-gradient-svg-eps.jpg');
+}
+
+.MuiCardMedia-img {
+    height: 425px !important;
+    width: 100% !important;
+    object-fit: contain !important;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    top: -10px;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.MuiCardMedia-img:hover {
+    transform: scale(1.15);
+
+}
+
+#informacion-personaje {
+    position: absolute;
+    margin-top: -50px;
+    background-color: #3C3E44;
+    width: 100% !important;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
 #nombre-personaje {
+    position: relative;
     font-size: 30px;
     font-weight: bold;
-    color: white;
+    color: #ffff;
+    z-index: 3;
 }
 
-.informacion{
-    font-size: 30px;
-    font-weight: bold;
+.informacion-color {
     color: #FBC02D;
 }
 
-.subtitulo{
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
+.subtitulo-color {
+    color: #ffff;
 }
 
+.dimension {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.MuiCardContent-root {
+    padding: 0 !important;
+}

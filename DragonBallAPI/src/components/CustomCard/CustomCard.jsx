@@ -10,25 +10,36 @@ const CustomCard = (props) => {
     return (
         <Card id='tarjeta' sx={{ maxWidth: 345 }}>
             <CardActionArea>
+                <div id='imagen-fondo'>
                 <CardMedia
                     component="img"
-                    //height="140"
                     image={props.img}
                 />
+                </div>
                 <CardContent>
-                    <Typography id='nombre-personaje'>
-                        {props.name}
-                    </Typography>
-                    <Typography className='informacion'>
-                        <p className='informacion'>{props.race} - {props.gender}</p>
-                    </Typography>
-                    <Typography>
-                        <p className='subtitulo'>Base KI:</p>
-                    </Typography>
-                    <Typography className='informacion'>
-                    </Typography>
-                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                    </Typography>
+                    <div id='informacion-personaje'>
+                        <Typography>
+                            <p id='nombre-personaje' className='sobreponer'>
+                                {props.name}</p>
+                        </Typography>
+                        <Typography>
+                            <p className='informacion-color dimension sobreponer'>
+                                {props.race} - {props.gender}
+                            </p>
+                        </Typography>
+                        <Typography>
+                            <p className='subtitulo-color dimension '>Base KI:</p>
+                            <p className='informacion-color dimension'>{props.ki}</p>
+                        </Typography>
+                        <Typography>
+                            <p className='subtitulo-color dimension'>Total KI:</p>
+                            <p className='informacion-color dimension'>{props.maxKi}</p>
+                        </Typography>
+                        <Typography>
+                            <p className='subtitulo-color dimension'>Afilliation:</p>
+                            <p className='informacion-color dimension'>{props.affiliation}</p>
+                        </Typography>
+                    </div>
                 </CardContent>
             </CardActionArea>
         </Card>

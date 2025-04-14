@@ -20,7 +20,7 @@ function App() {
       <main>
         {personaje.map((item) =>
           <CustomCard key={item.id} img={item.image} name={item.name} race={item.race} gender={item.gender}
-            ki={item.ki} />
+            ki={item.ki} maxKi={item.maxKi} affiliation={item.affiliation}/>
         )}
       </main>
     </>
