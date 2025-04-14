@@ -1,0 +1,23 @@
+#tarjeta {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+#nombre-personaje {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.informacion{
+    font-size: 30px;
+    font-weight: bold;
+    color: #FBC02D;
+}
+
+.subtitulo{
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+

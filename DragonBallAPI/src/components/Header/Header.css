@@ -1,0 +1,23 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  .contenedor-imagen img {
+    height: 60px;
+  }
+  
+  .contenedor-link{
+    display: flex;
+    gap: 30px;
+  }
+  
+  .contenedor-link a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  
