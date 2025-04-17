@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 
 import CustomCard from '../../components/CustomCard/CustomCard'
 import TransformationsCard from "../../components/TransformationsCard/TransformationsCard";
+import PDescription from "../../components/PDescription/PDescription";
+import H2Subtitulo from "../../components/H2Subtitulo/H2Subtitulo";
 import './DetailsPage.css'
 
 const DetailsPage = () => {
@@ -20,30 +22,53 @@ const DetailsPage = () => {
 
     return (
         <>
-            <main>
-                <CustomCard
-                    key={personaje.id}
-                    img={personaje.image}
-                    name={personaje.name}
-                    race={personaje.race}
-                    gender={personaje.gender}
-                    ki={personaje.ki}
-                    maxKi={personaje.maxKi}
-                    affiliation={personaje.affiliation}
-                />
+            <main id="informacion-principal">
+                <div className="card">
+                    <CustomCard
+                        key={personaje.id}
+                        img={personaje.image}
+                        name={personaje.name}
+                        race={personaje.race}
+                        gender={personaje.gender}
+                        ki={personaje.ki}
+                        maxKi={personaje.maxKi}
+                        affiliation={personaje.affiliation}
+                    />
+                </div>
+                <div className="descripcion">
+                    <H2Subtitulo>
+                        Descripción:
+                    </H2Subtitulo>
+                    <PDescription
+                        descripcion={personaje.description} />
+                    {personaje.originPlanet && personaje.originPlanet.name && (
+                        <>
+                            <H2Subtitulo>
+                                Planeta Origen:
+                            </H2Subtitulo>
+                            <PDescription descripcion={personaje.originPlanet.name} />
+                            <H2Subtitulo>
+                                Descripción:
+                            </H2Subtitulo>
+                            <PDescription descripcion={personaje.originPlanet.description}/>
+                                
+                        </>
+                    )}
+                </div>
             </main>
             {personaje.transformations && personaje.transformations.length > 0 && (
-    <div className="transformaciones-container">
-        {personaje.transformations.map((transformacion) => (
-            <TransformationsCard
-                key={transformacion.id}
-                img={transformacion.image}
-                name={transformacion.name}
-                ki={transformacion.ki}
-            />
-        ))}
-    </div>
-)}
+                
+                <div className="transformaciones-container">
+                    {personaje.transformations.map((transformacion) => (
+                        <TransformationsCard
+                            key={transformacion.id}
+                            img={transformacion.image}
+                            name={transformacion.name}
+                            ki={transformacion.ki}
+                        />
+                    ))}
+                </div>
+            )}
 
         </>
     );

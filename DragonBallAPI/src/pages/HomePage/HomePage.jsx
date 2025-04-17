@@ -3,6 +3,8 @@ import {Link} from 'react-router-dom';
 
 import CustomCard from '../../components/CustomCard/CustomCard';
 
+import './HomePage.css'
+
 const HomePage = () => {
 
   const [personaje, setPersonaje] = useState([])
