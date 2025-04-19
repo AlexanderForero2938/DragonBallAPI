@@ -1,23 +1,65 @@
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: white;
+}
+
+.principal{
+  display: none;
+}
+
+.contenedor-imagen img {
+  height: 60px;
+}
+
+.contenedor-link {
+  display: flex;
+  gap: 30px;
+}
+
+.contenedor-link{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.boton,
+.dashboard-button {
+  width: 120px !important;
+  height: 30px !important;
+  border-radius: 8px !important;
+  color: #ffff !important;
+  background-color: #272B33 !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+  font-family: "Segoe UI" !important;
+}
+
+.boton:hover,
+.dashboard-button:hover{
+  background-color: #FBC02D !important;
+}
+
+.enlace{
+  text-decoration: none;
+  font-size: 20px;
+  color: #272B33;
+}
+
+.enalce:hover{
+  color: #FBC02D;
+}
+
+@media (min-width: 501px) {
+  .dashboard-button {
+    display: none !important;
   }
-  
-  .contenedor-imagen img {
-    height: 60px;
+
+  .principal{
+    display: block;
   }
-  
-  .contenedor-link{
-    display: flex;
-    gap: 30px;
-  }
-  
-  .contenedor-link a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-  }
-  
+
+}
+

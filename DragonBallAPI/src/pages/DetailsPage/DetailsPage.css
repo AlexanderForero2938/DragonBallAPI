@@ -4,28 +4,28 @@
     box-sizing: border-box;
 }
 
-.transformaciones-container {
+ #transformaciones-container{
+    display: grid;
+    background-color: #272B33;
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "titulo"
+        "transformacion";
+} 
+
+#titulo{
+    grid-area: titulo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#transformacion{
+    grid-area: transformacion;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 20px;
     gap: 20px;
-}
-
-#informacion-principal{
-    display: grid;
-    grid-template-columns: 1fr, 1fr;
-    grid-template-areas: 
-    "card descripcion";
-}
-
-.card{
-    grid-area: card;
-}
-
-.descripcion{
-    grid-area: descripcion;
-}
-
-
-
+} 
