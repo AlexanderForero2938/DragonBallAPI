@@ -3,9 +3,6 @@ import { useParams } from "react-router-dom";
 
 import CustomCard from '../../components/CustomCard/CustomCard'
 import TransformationsCard from "../../components/TransformationsCard/TransformationsCard";
-import PDescription from "../../components/PDescription/PDescription";
-import H2Subtitulo from "../../components/H2Subtitulo/H2Subtitulo";
-import NavBar from "../../components/NavBar/NavBar";
 import './DetailsPage.css'
 
 const DetailsPage = () => {
@@ -36,28 +33,13 @@ const DetailsPage = () => {
                         affiliation={personaje.affiliation}
                     />
                 </div>
-                {/* <div className="descripcion">
-                    <H2Subtitulo>
-                        Descripción:
-                    </H2Subtitulo>
-                    <PDescription
-                        descripcion={personaje.description} />
-                    {personaje.originPlanet && personaje.originPlanet.name && (
-                        <>
-                            <H2Subtitulo>
-                                Planeta Origen:
-                            </H2Subtitulo>
-                            <PDescription descripcion={personaje.originPlanet.name} />
-                        </>
-                    )}
-                </div> */}
             </main>
             {personaje.transformations && personaje.transformations.length > 0 && (
                 <div id="transformaciones-container">
                     <div id="titulo">
-                        <H2Subtitulo>
-                            Transformaciones
-                        </H2Subtitulo>
+                      <h1 id="titulo-transformacion">
+                        Transformaciones
+                      </h1>
                     </div>
                     <div id="transformacion">
                         {personaje.transformations.map((transformacion) => (

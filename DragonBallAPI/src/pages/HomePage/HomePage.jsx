@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import {Link} from 'react-router-dom';
 
-import CustomCard from '../../components/CustomCard/CustomCard';
+import CharacterCard from '../../components/CharacterCard/CharacterCard';
 
 import './HomePage.css'
 
@@ -22,15 +22,12 @@ const HomePage = () => {
         {
             personaje.map((item) => (
                 <Link to={`/details/${item.id}`} key={item.id}>
-                    <CustomCard
+                    <CharacterCard
                         key={item.id} 
                         img={item.image}
                         name={item.name}
                         race={item.race}
                         gender={item.gender}
-                        ki={item.ki} 
-                        maxKi={item.maxKi} 
-                        affiliation={item.affiliation}
                     />
                 </Link>
             ))

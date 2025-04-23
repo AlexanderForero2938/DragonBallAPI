@@ -20,7 +20,8 @@ const Header = () => {
                 </Link>
                 <Link to={"filter/Female"} className='enlace principal'>Mujer
                 </Link>
-                <p className='enlace principal'>Acerca de</p>
+                <Link to={"acercade"} className='enlace principal'>Acerca de
+                </Link>
 
                 <PopupState variant="popover" popupId="demo-popup-menu">
                     {(popupState) => (
@@ -39,7 +40,7 @@ const Header = () => {
                                     <Link to="filter/Female" className='enlace'>Mujer</Link>
                                 </MenuItem>
                                 <MenuItem onClick={popupState.close}>
-                                    <p className='enlace'>Acerca de</p>
+                                <Link to={"filter/acerca"} className='enlace principal'>Acerca de</Link>
                                 </MenuItem>
                             </Menu>
                         </React.Fragment>

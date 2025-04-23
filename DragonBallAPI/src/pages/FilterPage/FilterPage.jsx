@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
 
-import CustomCard from '../../components/CustomCard/CustomCard'
+import CharacterCard from "../../components/CharacterCard/CharacterCard"
 
 const FilterPage = () => {
     let { genero } = useParams()
@@ -26,7 +26,7 @@ const FilterPage = () => {
             {
                 personaje.map((item) => (
                     <Link to={`/details/${item.id}`} key={item.id}>
-                        <CustomCard
+                        <CharacterCard
                         key={item.id} 
                         img={item.image}
                         name={item.name}

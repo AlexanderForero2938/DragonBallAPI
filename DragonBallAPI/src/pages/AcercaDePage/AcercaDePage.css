@@ -1,0 +1,31 @@
+#main-acercaDe {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -130px;
+}
+
+#informacion{
+    width: 800px;
+    border-radius: 10px;
+}
+
+#parrafo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Segoe UI";
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+.informacion-integrantes {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Segoe UI";
+    margin-bottom: 20px;
+
+}
