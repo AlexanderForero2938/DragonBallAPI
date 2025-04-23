@@ -27,7 +27,7 @@ const Header = () => {
                     {(popupState) => (
                         <React.Fragment>
                             <Button variant="contained" {...bindTrigger(popupState)} className="dashboard-button">
-                                Dashboard
+                                Menú
                             </Button>
                             <Menu {...bindMenu(popupState)}>
                                 <MenuItem onClick={popupState.close}>
@@ -40,7 +40,7 @@ const Header = () => {
                                     <Link to="filter/Female" className='enlace'>Mujer</Link>
                                 </MenuItem>
                                 <MenuItem onClick={popupState.close}>
-                                <Link to={"filter/acerca"} className='enlace principal'>Acerca de</Link>
+                                <Link to={"acercade"} className='enlace'>Acerca de</Link>
                                 </MenuItem>
                             </Menu>
                         </React.Fragment>
